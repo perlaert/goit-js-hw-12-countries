@@ -11,6 +11,7 @@ refs.inputRef.addEventListener('input', debounce(inputHandler, 500));
 function inputHandler(event) {
   const searchQuery = event.target.value;
   //   console.log(searchQuery);
+  clearInput();
 
   if (!searchQuery) {
     return;
@@ -18,7 +19,6 @@ function inputHandler(event) {
 
   fetchCounties(searchQuery)
     .then(data => {
-      clearInput();
       if (data.length > 10) {
         return notificationAlert(
           'Too many matches found. Please enter a more specific query!',
