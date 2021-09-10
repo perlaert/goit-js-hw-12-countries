@@ -19,7 +19,7 @@ body {
       rgba(47, 48, 58, 0.6)
     ),
     url('./images/karta_mira.jpg');
-  margin: 150px 0;
+  margin: 150px 0 50px;
   color: aliceblue;
 }
 
